@@ -1,0 +1,30 @@
+{
+  "name": "@test-monorepo/utils",
+  "main": "dist/utils.cjs",
+  "module": "dist/utils.mjs",
+  "types": "dist/utils.d.ts",
+  "typings": "dist/utils.d.ts",
+  "description": "JS utilities.",
+  "exports": {
+    "types": "./dist/utils.d.ts",
+    "import": "./dist/utils.mjs",
+    "require": "./dist/utils.cjs",
+    "node": "./dist/utils.cjs",
+    "default": "./dist/utils.cjs"
+  },
+  "esnext": {
+    "browser": "src/browser.js",
+    "main": "src/utils.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:amd": "tsc --project tsconfig.amd.json",
+    "build:system": "tsc --project tsconfig.system.json",
+    "test": "echo 'test'"
+  },
+  "type": "commonjs",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

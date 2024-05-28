@@ -1,0 +1,35 @@
+{
+  "author": {
+    "email": "antonionetocardoso@gmail.com",
+    "name": "Jomar A. Cardoso",
+    "url": "https://github.com/jomarcardoso"
+  },
+  "keywords": [
+    "monorepo",
+    "workspaces",
+    "tsconfig",
+    "project-references"
+  ],
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "private": true,
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:amd": "npm run build:amd --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "workspaces": [
+    "packages/foundation",
+    "packages/utils"
+  ],
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
